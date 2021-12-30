@@ -110,7 +110,7 @@ extern crate state;
 extern crate time;
 extern crate memchr;
 extern crate base64;
-extern crate atty;
+extern crate isatty;
 
 #[cfg(test)] #[macro_use] extern crate lazy_static;
 

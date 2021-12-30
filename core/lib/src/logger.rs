@@ -150,7 +150,7 @@ crate fn try_init(level: LoggingLevel, verbose: bool) -> bool {
         return false;
     }
 
-    if !::atty::is(::atty::Stream::Stdout)
+    if !::isatty::stdout_isatty()
         || (cfg!(windows) && !Paint::enable_windows_ascii())
         || env::var_os(COLORS_ENV).map(|v| v == "0" || v == "off").unwrap_or(false)
     {

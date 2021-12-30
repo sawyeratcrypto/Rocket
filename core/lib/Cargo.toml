@@ -35,7 +35,7 @@ time = "0.1"
 memchr = "2" # TODO: Use pear instead.
 base64 = "0.13"
 pear = "0.1"
-atty = "0.2"
+isatty = "0.1"
 
 [build-dependencies]
 yansi = "0.5"
