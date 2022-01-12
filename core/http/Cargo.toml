@@ -31,7 +31,7 @@ pear = "0.1"
 unicode-xid = "0.1"
 
 [dependencies.hyper-sync-rustls]
-version = "=0.3.0-rc.4"
+version = "=0.3.0-rc.17"
 features = ["server"]
 optional = true
 
