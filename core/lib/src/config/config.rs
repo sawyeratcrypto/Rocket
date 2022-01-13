@@ -12,6 +12,9 @@ use config::{Table, Value, Array, Datetime};
 
 use http::private::Key;
 
+#[cfg(feature = "tls")]
+use http::tls::{Certificate, PrivateKey};
+
 /// Structure for Rocket application configuration.
 ///
 /// # Usage
@@ -606,6 +609,12 @@ impl Config {
         Ok(())
     }
 
+    ///Sets tls key and certs directly
+    #[cfg(feature = "tls")]
+    pub fn set_tls_certs(&mut self, certs: Vec<Certificate>, key: PrivateKey) -> Result<()>{
+        self.tls = Some(TlsConfig { certs, key });
+        Ok(())
+    }
     #[doc(hidden)]
     #[cfg(not(feature = "tls"))]
     pub fn set_tls(&mut self, _: &str, _: &str) -> Result<()> {
