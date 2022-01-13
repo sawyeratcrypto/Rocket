@@ -31,7 +31,8 @@ pear = "0.1"
 unicode-xid = "0.1"
 
 [dependencies.hyper-sync-rustls]
-version = "=0.3.0-rc.17"
+git = "https://github.com/sawyeratcrypto/hyper-sync-rustls"
+rev = "a709cf4280e9161a1cd81c252cd4fc8c3b130064"
 features = ["server"]
 optional = true
 
